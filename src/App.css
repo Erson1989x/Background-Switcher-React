@@ -1,0 +1,66 @@
+/* --- Main --- */
+
+.background-switcher-container {
+  background-color: #AD636C;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  transition: ease-in-out 0.5s;
+}
+
+.background-switcher-text-container {
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  border-radius: 4px;
+  padding: 8px 12px;
+  gap: 12px;
+}
+
+.background-switcher-text-container h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.color-switcher-text-background {
+  color: #fff;
+}
+
+.color-switcher-text-color {
+  color: #AD636C;
+}
+
+.color-switcher-button {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding:8px 12px;
+  font-size: 20px;
+  border-radius: 8px;
+  border: none;
+  transition: ease-in-out 0.5s;
+}
+
+.background-switcher-display {
+  position: absolute;
+  font-size: 16px;
+  top: 12px;
+  right: 12px;
+  color: white;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 8px 12px;
+}
+
+.color-switcher-reset-container {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+
+.color-switcher-button-container {
+  display: flex;
+  gap: 12px;
+}
