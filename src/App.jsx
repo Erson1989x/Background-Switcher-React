@@ -3,29 +3,30 @@ import './App.css'
 import { resetButton } from './assets/components/functions.js';
 
 function App() {
+  // Use state
   const [listOfColors, setListOfColors] = useState(['#AD636C', '#009B72', '#6761A8', '#347E8D', '#798186', '#B4D2BA', '#B57F50', '#8ED081', '#F00000', '#bdc3c7']);
   const [currentColor, setCurrentColor] = useState('#AD636C');
   const [numberOfClicks, setNumberOfClicks] = useState(0);
   const [index, setIndex] = useState(0);
-
+ // Click Me Button
   const clickMEButton = () => {
     const randomIndex = Math.floor(Math.random() * listOfColors.length);
     setIndex(randomIndex);
     updateColors(randomIndex);
   }
-
+// Click Next Button
   const clickNextButton = () => {
     const nextIndex = (index + 1) % listOfColors.length;
     setIndex(nextIndex);
     updateColors(nextIndex);
   }
-
+// Click Previous Button
   const clickPreviousButton = () => {
     const prevIndex = (index - 1 + listOfColors.length) % listOfColors.length;
     setIndex(prevIndex);
     updateColors(prevIndex);
   }
-
+// Update Colors
   const updateColors = (colorIndex) => {
     const color = listOfColors[colorIndex];
     document.querySelector('.background-switcher-container').style.backgroundColor = color;
@@ -35,7 +36,7 @@ function App() {
     setCurrentColor(color);
     setNumberOfClicks(numberOfClicks + 1);
   }
-
+// Handle Reset Button
   const handleReset = () => {
     resetButton(setCurrentColor, setNumberOfClicks, setIndex);
   }
